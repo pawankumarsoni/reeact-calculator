@@ -1,14 +1,34 @@
-import React from 'react';
+import React,{ PureComponent } from 'react';
 import './result.css';
 
-const Result = (props) => {
-
+class Result extends PureComponent{
+render(){
+    console.log("Renderring Result");
     return ( 
         <div className="Result">
-        <p> Result: { props.result } </p> 
+        <p> Result:  </p>
+        <p>{ this.props.result }</p> 
         </div>
     );
 
 }
+    
+}
 
 export default Result;
+
+
+// const Result = (props) => {
+    
+//         console.log("Render  Result");
+//         return ( 
+//             <div className="Result">
+//             <p> Result:  </p>
+//             <p>{ props.result }</p> 
+//             </div>
+//         );
+    
+        
+//     }
+    
+//     export default React.memo(Result);
